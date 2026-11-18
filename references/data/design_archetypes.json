@@ -1,0 +1,181 @@
+[
+  {
+    "id": "linear-precision",
+    "name": "Linear Precision SaaS",
+    "surfaces": ["saas-app", "design-system"],
+    "density": "compact",
+    "motion_tier": 1,
+    "domains": ["productivity", "devtools", "saas", "project-management", "workflow"],
+    "layout_principles": [
+      "Persistent slim sidebar rail (240px) + fluid command-first main canvas",
+      "Hairline 1px borders and subtle tonal elevation instead of heavy drop shadows",
+      "Cmd+K command bar as first-class navigation and quick-action trigger",
+      "Tabular numeric columns with sticky headers and inline keyboard shortcuts"
+    ],
+    "surface_treatment": "Low-glare charcoal or clean neutral-slate surfaces with crisp 1px hairline borders and restrained single-hue focus accent.",
+    "recommended_palettes": ["obsidian-cobalt", "graphite-emerald", "zinc-signal-blue"],
+    "recommended_fonts": ["geist-mono-precision", "jakarta-jetbrains"],
+    "avoid": ["Rainbow multi-hue badges everywhere", "Heavy glass blur over scrolling text", "Cards nested 3 levels deep"]
+  },
+  {
+    "id": "editorial-high-craft",
+    "name": "Editorial High-Craft Launch",
+    "surfaces": ["marketing-editorial", "docs-content"],
+    "density": "editorial",
+    "motion_tier": 2,
+    "domains": ["ai-product", "brand", "agency", "creative-tool", "launch"],
+    "layout_principles": [
+      "Asymmetric 12-column editorial grid with bold display scale contrast (clamp 2.5rem..5.5rem)",
+      "Single unmistakable focal point above the fold; immediate SSR paint (no opacity:0 hero block)",
+      "Alternating wide media/interactive demo frames with tight 60ch narrative blocks",
+      "Proof-driven sections (live interactive widget, benchmark table, architectural diagram) over generic feature-icon trios"
+    ],
+    "surface_treatment": "Warm stone/bone paper or deep espresso-ink background paired with sculptural hairline rules and editorial serif/grotesque contrast.",
+    "recommended_palettes": ["warm-alabaster-vermilion", "espresso-amber-ink", "forest-vellum"],
+    "recommended_fonts": ["instrument-serif-inter", "fraunces-manrope", "syne-ibm-plex"],
+    "avoid": ["Purple-indigo hero gradient", "3-column centered icon-in-circle grids", "Generic stock SaaS mockup frames"]
+  },
+  {
+    "id": "fintech-ledger",
+    "name": "Fintech & Institutional Ledger",
+    "surfaces": ["saas-app", "commerce-storefront"],
+    "density": "compact",
+    "motion_tier": 1,
+    "domains": ["fintech", "banking", "treasury", "billing", "trading", "crypto"],
+    "layout_principles": [
+      "Strict tabular-nums alignment across currency, delta percentages, and timestamps",
+      "Summary KPI strip anchored above sortable ledger table and reconciliation drawer",
+      "Dual semantic confirmation (icon + sign + text + color) for credit/debit/risk states",
+      "Zero ambiguous truncation on monetary values or account identifiers"
+    ],
+    "surface_treatment": "High-contrast porcelain or deep navy-slate with crisp emerald/crimson semantic delta chips and zero ornamental glow.",
+    "recommended_palettes": ["porcelain-teal-ledger", "midnight-treasury"],
+    "recommended_fonts": ["ibm-plex-mono-ledger", "geist-mono-precision"],
+    "avoid": ["Neon cyberpunk dark theme", "Low-contrast grey currency labels", "Unformatted floating point decimals"]
+  },
+  {
+    "id": "swiss-technical-docs",
+    "name": "Swiss Grid Technical Docs",
+    "surfaces": ["docs-content", "design-system"],
+    "density": "balanced",
+    "motion_tier": 0,
+    "domains": ["documentation", "api-reference", "sdk", "developer-portal", "blog"],
+    "layout_principles": [
+      "3-column desktop architecture: left topic tree, 65ch center prose + code tabs, right sticky TOC",
+      "Instant keyboard search (/) and deep anchor links on every section heading",
+      "Copy-ready code blocks with language badge and line-highlight support",
+      "Zero decorative entrance animations blocking fast scanning"
+    ],
+    "surface_treatment": "High-legibility paper white or low-contrast dark ink with AAA-leaning body contrast and distinct inline code wells.",
+    "recommended_palettes": ["swiss-paper-crimson", "zinc-signal-blue"],
+    "recommended_fonts": ["ibm-plex-sans-mono", "public-sans-fira"],
+    "avoid": ["Wide 110ch prose columns", "Auto-collapsing sidebar sections on every navigation", "Slow fade-ins on doc pages"]
+  },
+  {
+    "id": "atelier-commerce",
+    "name": "Atelier Tactile Commerce",
+    "surfaces": ["commerce-storefront", "marketing-editorial"],
+    "density": "balanced",
+    "motion_tier": 1,
+    "domains": ["ecommerce", "fashion", "hardware", "consumer-brand", "retail"],
+    "layout_principles": [
+      "Aspect-ratio locked product imagery (3:4 or 4:5) preventing CLS during scroll",
+      "Sticky purchase/variant bar on PDP paired with clear stock, shipping, and trust micro-copy",
+      "Slide-over cart drawer with optimistic quantity steppers and clear subtotal math",
+      "Fast faceted filtering via URL search params (shareable & back-button safe)"
+    ],
+    "surface_treatment": "Neutral alabaster/linen backdrop letting product photography dominate without competing chrome.",
+    "recommended_palettes": ["warm-alabaster-vermilion", "sandstone-olive", "obsidian-cobalt"],
+    "recommended_fonts": ["cormorant-plus-jakarta", "fraunces-manrope"],
+    "avoid": ["Tiny 12px price/stock text", "Carousel sliders hijacking vertical scroll", "Full-page blocking newsletter popups on load"]
+  },
+  {
+    "id": "clinical-clarity",
+    "name": "Clinical & Healthcare Clarity",
+    "surfaces": ["saas-app", "docs-content"],
+    "density": "balanced",
+    "motion_tier": 0,
+    "domains": ["healthcare", "medical", "biotech", "accessibility", "civic", "education"],
+    "layout_principles": [
+      "WCAG AAA-first typography (>= 16px body, generous 1.6 line-height, 7:1 contrast target)",
+      "Unambiguous patient/record context bar pinned atop forms and multi-step workflows",
+      "Explicit icon + label alerts for warnings and critical thresholds (never color alone)",
+      "Large 44px+ hit targets across all interactive controls"
+    ],
+    "surface_treatment": "Calm off-white or muted sage/slate surfaces with high-clarity cerulean/teal actions and clear field borders.",
+    "recommended_palettes": ["civic-aaa-cerulean", "porcelain-teal-ledger"],
+    "recommended_fonts": ["atkinson-hyperlegible-mono", "public-sans-fira"],
+    "avoid": ["Low-contrast muted grey text", "Auto-dismissing critical alerts", "Motion-heavy transitions"]
+  },
+  {
+    "id": "devtools-terminal",
+    "name": "Observability & DevTools Console",
+    "surfaces": ["saas-app", "interactive-canvas"],
+    "density": "compact",
+    "motion_tier": 1,
+    "domains": ["observability", "monitoring", "cloud", "cli", "database", "analytics"],
+    "layout_principles": [
+      "High-density split panes: filter query bar, timeline histogram, log/trace stream, inspector drawer",
+      "Monospace alignment for IDs, timestamps, latency p95/p99, and JSON payloads",
+      "Colorblind-safe chart palettes distinguishing series by stroke/marker as well as hue",
+      "Keyboard shortcuts for log stepping, query focus, and filter toggling"
+    ],
+    "surface_treatment": "Deep carbon/obsidian canvas with crisp hairline gridlines, high-contrast amber/emerald/cyan telemetry accents.",
+    "recommended_palettes": ["carbon-amber-telemetry", "obsidian-cobalt"],
+    "recommended_fonts": ["jetbrains-inter-telemetry", "ibm-plex-mono-ledger"],
+    "avoid": ["Oversized hero banners inside authenticated consoles", "Pie charts for time-series telemetry", "Unvirtualized 5000-row log DOM dumps"]
+  },
+  {
+    "id": "spatial-studio",
+    "name": "Spatial 3D & Interactive Studio",
+    "surfaces": ["interactive-canvas", "marketing-editorial"],
+    "density": "compact",
+    "motion_tier": 2,
+    "domains": ["3d", "webgl", "design-tool", "audio-studio", "cad", "creative"],
+    "layout_principles": [
+      "Full-bleed bounded viewport canvas (min-h-dvh) with floating translucent HUD toolbars (strictly single-layer blur)",
+      "Lazy-loaded Three.js/Canvas chunk paired with instant SVG/poster SSR placeholder",
+      "Explicit keyboard/button camera controls alongside pointer orbit + WebGL context-loss fallback",
+      "Static resting composition when prefers-reduced-motion: reduce is active"
+    ],
+    "surface_treatment": "Deep neutral studio matte backdrop framing interactive 3D/canvas artifacts without distracting chrome.",
+    "recommended_palettes": ["studio-carbon-lime", "espresso-amber-ink"],
+    "recommended_fonts": ["space-grotesk-ibm-mono", "syne-ibm-plex"],
+    "avoid": ["Unbounded requestAnimationFrame spinning hidden tabs", "Text overlapping live canvas controls with < 4.5:1 contrast"]
+  },
+  {
+    "id": "warm-humanist-saas",
+    "name": "Warm Humanist Workspace",
+    "surfaces": ["saas-app", "commerce-storefront"],
+    "density": "balanced",
+    "motion_tier": 1,
+    "domains": ["collaboration", "hr", "crm", "community", "notes", "education"],
+    "layout_principles": [
+      "Approachable generous radius (10px–14px) and warm stone neutrals instead of sterile cold greys",
+      "Clear conversational empty states and inline contextual helpers",
+      "Clean master-detail split on tablet/desktop collapsing to stack navigation on mobile",
+      "Friendly yet crisp typography with unmistakable primary CTA contrast"
+    ],
+    "surface_treatment": "Warm sand/oatmeal paper surfaces with earthy terracotta or forest accents and soft layered shadows.",
+    "recommended_palettes": ["sandstone-olive", "forest-vellum"],
+    "recommended_fonts": ["plus-jakarta-source-serif", "fraunces-manrope"],
+    "avoid": ["Sterile pure-white + neon-blue bootstrap templates", "Excessive emoji spam in every heading"]
+  },
+  {
+    "id": "token-primitive-system",
+    "name": "Design System & Component Kit",
+    "surfaces": ["design-system"],
+    "density": "balanced",
+    "motion_tier": 1,
+    "domains": ["ui-library", "design-system", "storybook", "component-kit"],
+    "layout_principles": [
+      "Live interactive playground paired with prop table, keyboard map, and anatomy diagram",
+      "Token-driven variant matrix (size, variant, state) exposed via compound APIs",
+      "Side-by-side light/dark preview and explicit WCAG/APCA contrast badges"
+    ],
+    "surface_treatment": "Neutral calibrated canvas avoiding brand bias so component states and focus rings stand out cleanly.",
+    "recommended_palettes": ["zinc-signal-blue", "swiss-paper-crimson"],
+    "recommended_fonts": ["geist-mono-precision", "public-sans-fira"],
+    "avoid": ["Hardcoded component colors bypassing CSS variables", "Boolean-prop sprawl instead of compound slots"]
+  }
+]

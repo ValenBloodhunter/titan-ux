@@ -1,0 +1,83 @@
+[
+  {
+    "id": "command-palette",
+    "name": "Command Palette (Cmd/Ctrl+K)",
+    "surfaces": ["saas-app", "docs-content", "design-system"],
+    "requirements": [
+      "Global shortcut Cmd+K / Ctrl+K with visible keyboard hint badge",
+      "ARIA combobox + listbox navigation (ArrowUp/Down, Enter, Escape)",
+      "Empty state suggesting recent actions or exact search tips",
+      "Focus returns cleanly to previously focused element on close"
+    ]
+  },
+  {
+    "id": "faceted-data-table",
+    "name": "Faceted Data Table & Inspector",
+    "surfaces": ["saas-app", "commerce-storefront"],
+    "requirements": [
+      "Sticky header, right-aligned tabular-nums numeric columns, mobile card or horizontal scroll shadow",
+      "URL-synced filter/sort/page state so links are shareable and Back button works",
+      "Geometry-matched skeleton rows during loading + actionable 'Clear filters' empty state",
+      "Bulk selection bar appears without shifting layout height"
+    ]
+  },
+  {
+    "id": "schema-validated-form",
+    "name": "Schema-Validated Form & Inline Errors",
+    "surfaces": ["saas-app", "commerce-storefront", "marketing-editorial"],
+    "requirements": [
+      "Explicit <label htmlFor> on every control; never placeholder-only labels",
+      "Inline error below field bound via aria-describedby and aria-invalid",
+      "Focus moves to first invalid input on failed submit; user input never cleared on error",
+      "Pending submit locks double clicks with aria-busy and stable button width"
+    ]
+  },
+  {
+    "id": "slide-over-drawer",
+    "name": "Origin-Aware Slide-Over Drawer / Cart",
+    "surfaces": ["saas-app", "commerce-storefront"],
+    "requirements": [
+      "Focus trap while open, Escape + backdrop click dismissal, body scroll lock",
+      "GPU transform translateX transition <= 240ms ease-out with reduced-motion instant fallback",
+      "Sticky footer for primary action (Save / Checkout) above safe-area-inset-bottom on mobile"
+    ]
+  },
+  {
+    "id": "destructive-confirm-undo",
+    "name": "Destructive Action Safety (Confirm or Undo)",
+    "surfaces": ["saas-app", "design-system"],
+    "requirements": [
+      "Irreversible deletions open modal naming the exact resource and requiring explicit confirmation",
+      "Reversible archives/removals execute optimistically with 5s Undo toast (aria-live='polite')"
+    ]
+  },
+  {
+    "id": "chart-with-a11y-parity",
+    "name": "Accessible Telemetry Chart",
+    "surfaces": ["saas-app", "interactive-canvas"],
+    "requirements": [
+      "Colorblind-safe series encoding (hue + stroke dash or point shape)",
+      "Tabular-nums tooltips + keyboard focusable series summary or toggleable data table",
+      "Explicit container aspect-ratio preventing CLS during dynamic import"
+    ]
+  },
+  {
+    "id": "mobile-responsive-shell",
+    "name": "Mobile Navigation Shell (375px)",
+    "surfaces": ["saas-app", "marketing-editorial", "docs-content", "commerce-storefront"],
+    "requirements": [
+      "Collapsible drawer or bottom navigation bar with >= 44x44px hit targets",
+      "Zero horizontal page overflow (scrollWidth <= innerWidth) across all breakpoints",
+      "Uses min-h-dvh rather than 100vh for full-height shells"
+    ]
+  },
+  {
+    "id": "optimistic-inline-edit",
+    "name": "Optimistic Inline Title / Setting Edit",
+    "surfaces": ["saas-app"],
+    "requirements": [
+      "Enter commits, Escape cancels cleanly restoring prior value",
+      "Optimistic UI updates immediately and rolls back with inline role='alert' message on error"
+    ]
+  }
+]

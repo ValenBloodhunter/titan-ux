@@ -1,0 +1,98 @@
+[
+  {
+    "id": "SLOP_RAW_HEX_IN_COMPONENT",
+    "severity": "error",
+    "category": "tokens",
+    "bad_pattern": "Hardcoded hex/rgb color literals inside JSX/TSX/Vue/Svelte component styles or Tailwind arbitrary brackets (bg-[#6366f1])",
+    "why_it_fails": "Breaks light/dark mode parity, theme customization, and automated contrast guarantees.",
+    "fix_pattern": "Bind exclusively to semantic CSS variables or Tailwind @theme tokens (bg-accent, text-text-muted, border-border)."
+  },
+  {
+    "id": "SLOP_UNREQUESTED_AI_GRADIENT",
+    "severity": "warning",
+    "category": "aesthetics",
+    "bad_pattern": "Purple-to-indigo-to-cyan gradient blobs/text on dark #0f172a backgrounds",
+    "why_it_fails": "Generic AI boilerplate aesthetic lacking domain intentionality.",
+    "fix_pattern": "Select a grounded domain palette from palettes.json and build contrast through typography, surface steps, and layout rhythm."
+  },
+  {
+    "id": "SLOP_PLACEHOLDER_COPY",
+    "severity": "error",
+    "category": "content",
+    "bad_pattern": "Lorem ipsum, Acme Corp, John Doe, Jane Doe, TODO, FIXME, or TITAN_DRAFT markers left in shipped UI",
+    "why_it_fails": "Signals unfinished mock output and breaks realistic text wrapping validation.",
+    "fix_pattern": "Author realistic domain-authentic fixtures, action-oriented labels, and complete interactive states."
+  },
+  {
+    "id": "SLOP_TRANSITION_ALL",
+    "severity": "error",
+    "category": "motion",
+    "bad_pattern": "transition: all or Tailwind transition-all",
+    "why_it_fails": "Accidently animates layout properties (width/height/padding) or font styles on state changes, harming frame pacing.",
+    "fix_pattern": "Specify explicit GPU-safe properties: transition-[transform,opacity,background-color,border-color] duration-150 ease-out."
+  },
+  {
+    "id": "SLOP_LAYOUT_ANIMATION",
+    "severity": "error",
+    "category": "motion",
+    "bad_pattern": "Animating width, height, top, left, margin, or padding in CSS transitions/keyframes",
+    "why_it_fails": "Forces main-thread layout recalculation on every frame, causing visible jank.",
+    "fix_pattern": "Use transform (translate3d/scale), opacity, clip-path, or grid-template-rows: 0fr -> 1fr for accordions."
+  },
+  {
+    "id": "SLOP_MISSING_REDUCED_MOTION",
+    "severity": "error",
+    "category": "motion",
+    "bad_pattern": "CSS animations/transitions or Motion primitives with no prefers-reduced-motion media query or MotionConfig",
+    "why_it_fails": "Causes vestibular discomfort and violates WCAG 2.2 Animation from Interactions.",
+    "fix_pattern": "Add @media (prefers-reduced-motion: reduce) fallback in base CSS and <MotionConfig reducedMotion='user'> at app root."
+  },
+  {
+    "id": "SLOP_OUTLINE_NONE_NO_RING",
+    "severity": "error",
+    "category": "a11y",
+    "bad_pattern": "outline: none / outline-none / focus:outline-none without a replacement focus-visible ring",
+    "why_it_fails": "Destroys keyboard navigation visibility.",
+    "fix_pattern": "Pair focus:outline-none with focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2."
+  },
+  {
+    "id": "SLOP_DIV_ONCLICK",
+    "severity": "error",
+    "category": "a11y",
+    "bad_pattern": "<div onClick={...}> or <span onClick={...}> used instead of native <button> or <a>",
+    "why_it_fails": "Missing keyboard Enter/Space activation, focusability, and screen-reader button/link role.",
+    "fix_pattern": "Replace with <button type='button'> or <a href='...'> (or add explicit role, tabIndex={0}, and onKeyDown if genuinely custom)."
+  },
+  {
+    "id": "SLOP_INDEX_AS_KEY",
+    "severity": "warning",
+    "category": "perf",
+    "bad_pattern": "React key={index} / key={i} inside .map()",
+    "why_it_fails": "Corrupts component state and breaks list transition choreography when items reorder, filter, or delete.",
+    "fix_pattern": "Use stable domain IDs (key={item.id})."
+  },
+  {
+    "id": "SLOP_100VH_TRAP",
+    "severity": "warning",
+    "category": "responsive",
+    "bad_pattern": "Bare 100vh / h-screen / min-h-screen without 100dvh / dvh",
+    "why_it_fails": "Clips bottom bars and CTAs behind dynamic mobile browser toolbars.",
+    "fix_pattern": "Use min-h-dvh (or min-height: 100vh; min-height: 100dvh;)."
+  },
+  {
+    "id": "SLOP_BOOLEAN_PROP_EXPLOSION",
+    "severity": "warning",
+    "category": "architecture",
+    "bad_pattern": "Components taking 6+ boolean flags (hasHeader, showBorder, isCompact, withFooterIcon, noPadding)",
+    "why_it_fails": "Creates exponential edge-case branches and rigid layouts.",
+    "fix_pattern": "Refactor to compound subcomponents (<Card.Header>, <Card.Body>) and discrete cva variants."
+  },
+  {
+    "id": "SLOP_BLANK_TARGET_UNSAFE",
+    "severity": "error",
+    "category": "security",
+    "bad_pattern": "target='_blank' without rel='noopener noreferrer'",
+    "why_it_fails": "Exposes window.opener reference to external origins.",
+    "fix_pattern": "Always pair target='_blank' with rel='noopener noreferrer'."
+  }
+]

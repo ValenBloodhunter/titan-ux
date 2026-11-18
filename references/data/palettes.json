@@ -1,0 +1,405 @@
+[
+  {
+    "id": "obsidian-cobalt",
+    "name": "Obsidian & Cobalt Precision",
+    "domains": ["saas", "devtools", "ai", "productivity"],
+    "light": {
+      "bg": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#F1F5F9",
+      "border": "#CBD5E1",
+      "text": "#0F172A",
+      "text-muted": "#475569",
+      "accent": "#1D4ED8",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0B0F17",
+      "surface": "#121826",
+      "surface-elevated": "#1A2234",
+      "border": "#2A344B",
+      "text": "#F1F5F9",
+      "text-muted": "#94A3B8",
+      "accent": "#60A5FA",
+      "accent-fg": "#09111E",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "graphite-emerald",
+    "name": "Graphite & Emerald Signal",
+    "domains": ["fintech", "saas", "analytics", "sustainability"],
+    "light": {
+      "bg": "#F6F7F6",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#ECEFED",
+      "border": "#C9D1CC",
+      "text": "#111815",
+      "text-muted": "#43524B",
+      "accent": "#047857",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0D110F",
+      "surface": "#141B17",
+      "surface-elevated": "#1C2620",
+      "border": "#2B3A32",
+      "text": "#ECF2EE",
+      "text-muted": "#9AB0A3",
+      "accent": "#34D399",
+      "accent-fg": "#062118",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "zinc-signal-blue",
+    "name": "Zinc Neutral & Signal Blue",
+    "domains": ["design-system", "docs", "enterprise", "saas"],
+    "light": {
+      "bg": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#F4F4F5",
+      "border": "#D4D4D8",
+      "text": "#18181B",
+      "text-muted": "#52525B",
+      "accent": "#0369A1",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#A16207",
+      "danger": "#DC2626"
+    },
+    "dark": {
+      "bg": "#09090B",
+      "surface": "#121215",
+      "surface-elevated": "#1B1B20",
+      "border": "#2E2E36",
+      "text": "#F4F4F5",
+      "text-muted": "#A1A1AA",
+      "accent": "#38BDF8",
+      "accent-fg": "#082030",
+      "success": "#4ADE80",
+      "warning": "#FACC15",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "warm-alabaster-vermilion",
+    "name": "Warm Alabaster & Editorial Vermilion",
+    "domains": ["editorial", "marketing", "commerce", "agency", "portfolio"],
+    "light": {
+      "bg": "#FAF7F2",
+      "surface": "#FFFDF9",
+      "surface-elevated": "#F2ECE1",
+      "border": "#D8CFC0",
+      "text": "#1C1917",
+      "text-muted": "#57534E",
+      "accent": "#C2410C",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#151210",
+      "surface": "#1E1A17",
+      "surface-elevated": "#29231F",
+      "border": "#3E3630",
+      "text": "#F5EFE6",
+      "text-muted": "#B8ADA0",
+      "accent": "#FB923C",
+      "accent-fg": "#1E0F05",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "espresso-amber-ink",
+    "name": "Espresso Ink & Burnished Amber",
+    "domains": ["brand", "creative", "studio", "editorial", "audio"],
+    "light": {
+      "bg": "#FBF8F3",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#F3ECE0",
+      "border": "#D7CCB8",
+      "text": "#231B15",
+      "text-muted": "#5E5045",
+      "accent": "#9A3412",
+      "accent-fg": "#FFFFFF",
+      "success": "#166534",
+      "warning": "#92400E",
+      "danger": "#991B1B"
+    },
+    "dark": {
+      "bg": "#120E0B",
+      "surface": "#1B1511",
+      "surface-elevated": "#261E18",
+      "border": "#3D3128",
+      "text": "#F6EFE6",
+      "text-muted": "#BCAEA0",
+      "accent": "#F59E0B",
+      "accent-fg": "#1B1002",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "forest-vellum",
+    "name": "Forest Vellum & Botanical Ink",
+    "domains": ["climate", "editorial", "education", "collaboration", "wellness"],
+    "light": {
+      "bg": "#F6F5F0",
+      "surface": "#FCFBF8",
+      "surface-elevated": "#EAE7DC",
+      "border": "#CAC5B6",
+      "text": "#18211C",
+      "text-muted": "#4B5951",
+      "accent": "#166534",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0F1612",
+      "surface": "#16201A",
+      "surface-elevated": "#1E2B24",
+      "border": "#304338",
+      "text": "#EFF3EE",
+      "text-muted": "#A3B4A9",
+      "accent": "#6EE7B7",
+      "accent-fg": "#072115",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "porcelain-teal-ledger",
+    "name": "Porcelain & Institutional Teal",
+    "domains": ["fintech", "banking", "healthcare", "accounting", "enterprise"],
+    "light": {
+      "bg": "#F4F7F8",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#E8EFF2",
+      "border": "#C2D0D6",
+      "text": "#0F1E24",
+      "text-muted": "#415660",
+      "accent": "#0F766E",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0A1317",
+      "surface": "#111E24",
+      "surface-elevated": "#182A32",
+      "border": "#2A414C",
+      "text": "#EDF4F7",
+      "text-muted": "#9BB2BC",
+      "accent": "#2DD4BF",
+      "accent-fg": "#05201E",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "midnight-treasury",
+    "name": "Midnight Navy & Mint Ledger",
+    "domains": ["fintech", "trading", "treasury", "billing"],
+    "light": {
+      "bg": "#F5F7FA",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#E9EEF5",
+      "border": "#C5D0DF",
+      "text": "#0B1628",
+      "text-muted": "#44536B",
+      "accent": "#1E40AF",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#080E1A",
+      "surface": "#10192B",
+      "surface-elevated": "#17233B",
+      "border": "#28395C",
+      "text": "#F0F4FA",
+      "text-muted": "#99AAC4",
+      "accent": "#5EEAD4",
+      "accent-fg": "#04221F",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "swiss-paper-crimson",
+    "name": "Swiss Broadsheet & Crimson",
+    "domains": ["docs", "publishing", "news", "design-system", "portfolio"],
+    "light": {
+      "bg": "#F7F7F5",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#ECECE8",
+      "border": "#CECEC7",
+      "text": "#121212",
+      "text-muted": "#4D4D4A",
+      "accent": "#B91C1C",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#111111",
+      "surface": "#191919",
+      "surface-elevated": "#232323",
+      "border": "#363636",
+      "text": "#F5F5F4",
+      "text-muted": "#A8A8A3",
+      "accent": "#F87171",
+      "accent-fg": "#240606",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#FCA5A5"
+    }
+  },
+  {
+    "id": "civic-aaa-cerulean",
+    "name": "Civic AAA Cerulean",
+    "domains": ["healthcare", "civic", "government", "accessibility", "education"],
+    "light": {
+      "bg": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#EDF2F7",
+      "border": "#94A3B8",
+      "text": "#0A111F",
+      "text-muted": "#334155",
+      "accent": "#035388",
+      "accent-fg": "#FFFFFF",
+      "success": "#146C2E",
+      "warning": "#92400E",
+      "danger": "#A61B1B"
+    },
+    "dark": {
+      "bg": "#0A0F18",
+      "surface": "#121A28",
+      "surface-elevated": "#1A2538",
+      "border": "#475569",
+      "text": "#F8FAFC",
+      "text-muted": "#CBD5E1",
+      "accent": "#7DD3FC",
+      "accent-fg": "#071E2E",
+      "success": "#6EE7B7",
+      "warning": "#FCD34D",
+      "danger": "#FCA5A5"
+    }
+  },
+  {
+    "id": "carbon-amber-telemetry",
+    "name": "Carbon & Amber Telemetry",
+    "domains": ["observability", "monitoring", "cloud", "cli", "database"],
+    "light": {
+      "bg": "#F6F6F4",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#EBEBE7",
+      "border": "#C9C9C2",
+      "text": "#171715",
+      "text-muted": "#52524C",
+      "accent": "#B45309",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0C0D0E",
+      "surface": "#141618",
+      "surface-elevated": "#1D2024",
+      "border": "#2F343A",
+      "text": "#F2F4F7",
+      "text-muted": "#9CA3AF",
+      "accent": "#FBBF24",
+      "accent-fg": "#1A1102",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "studio-carbon-lime",
+    "name": "Studio Matte & Acid Lime",
+    "domains": ["3d", "webgl", "audio", "creative", "gaming", "cad"],
+    "light": {
+      "bg": "#F5F6F2",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#EAECE4",
+      "border": "#C5C9BA",
+      "text": "#141612",
+      "text-muted": "#4B5245",
+      "accent": "#3F6212",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#A16207",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#0B0C0A",
+      "surface": "#131511",
+      "surface-elevated": "#1C1F19",
+      "border": "#2F352A",
+      "text": "#F2F5EC",
+      "text-muted": "#A3AD99",
+      "accent": "#A3E635",
+      "accent-fg": "#101A03",
+      "success": "#4ADE80",
+      "warning": "#FACC15",
+      "danger": "#F87171"
+    }
+  },
+  {
+    "id": "sandstone-olive",
+    "name": "Sandstone & Olive Tactile",
+    "domains": ["commerce", "collaboration", "hr", "lifestyle", "notes"],
+    "light": {
+      "bg": "#F8F5F0",
+      "surface": "#FFFEFB",
+      "surface-elevated": "#EEE8DE",
+      "border": "#D1C8B8",
+      "text": "#1F1D1A",
+      "text-muted": "#59534A",
+      "accent": "#4D5E2A",
+      "accent-fg": "#FFFFFF",
+      "success": "#15803D",
+      "warning": "#B45309",
+      "danger": "#B91C1C"
+    },
+    "dark": {
+      "bg": "#141310",
+      "surface": "#1C1B17",
+      "surface-elevated": "#26241E",
+      "border": "#3B372F",
+      "text": "#F3EFE8",
+      "text-muted": "#B5AEA0",
+      "accent": "#BEF264",
+      "accent-fg": "#141B05",
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "danger": "#F87171"
+    }
+  }
+]
