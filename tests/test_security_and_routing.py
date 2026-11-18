@@ -1,6 +1,8 @@
 """Security containment, cross-agent wrapper integrity, and 5-axis routing tests."""
 import os
 import re
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -101,6 +103,31 @@ class TestFiveAxisRouting(unittest.TestCase):
                 rf.plan_frontend_task(bad)
         with self.assertRaises(ValueError):
             rf.plan_frontend_task("/titan-discover app", surface="saas-app")
+
+
+class TestInstallers(unittest.TestCase):
+    def test_powershell_installer_custom_path(self):
+        ps_exe = shutil.which("powershell") or shutil.which("pwsh")
+        if not ps_exe:
+            self.skipTest("PowerShell not available")
+        with tempfile.TemporaryDirectory() as tmp:
+            proc = subprocess.run(
+                [ps_exe, "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(ROOT / "install.ps1"), "-CustomPath", tmp],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertTrue((Path(tmp) / "titan-ux" / "SKILL.md").is_file())
+            self.assertTrue((Path(tmp) / "titan-ux" / "scripts" / "verify_frontend.py").is_file())
+            self.assertTrue((Path(tmp) / "titan-ux" / "references" / "routes.json").is_file())
+            for wrapper in (ROOT / "skills").iterdir():
+                self.assertTrue((Path(tmp) / wrapper.name / "SKILL.md").is_file(), f"Missing installed wrapper {wrapper.name}")
+
+    def test_unix_installer_has_lf_and_valid_structure(self):
+        raw = (ROOT / "install.sh").read_bytes()
+        self.assertNotIn(b"\r\n", raw, "install.sh must use LF line endings")
+        self.assertTrue(raw.startswith(b"#!/usr/bin/env bash"))
 
 
 if __name__ == "__main__":
