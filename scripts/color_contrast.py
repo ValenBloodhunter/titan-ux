@@ -269,13 +269,14 @@ def _extract_css_theme_vars(css_text: str) -> dict[str, dict[str, str]]:
     cleaned = re.sub(r"/\*[\s\S]*?\*/", "", css_text)
     themes: dict[str, dict[str, str]] = {"light": {}, "dark": {}}
     block_re = re.compile(r"([^{}]+)\{([^{}]*)\}", re.S)
-    for selector, body in block_re.findall(cleaned):
-        sel = selector.strip()
+    for raw_selector, body in block_re.findall(cleaned):
+        # Ignore preceding semicolon-terminated @import / @custom-variant statements
+        sel = raw_selector.rsplit(";", 1)[-1].strip()
         target = None
-        if ":root" in sel or "[data-theme=\"light\"]" in sel or "[data-theme='light']" in sel:
-            target = "light"
-        if any(tok in sel for tok in [".dark", "[data-theme=\"dark\"]", "[data-theme='dark']"]):
+        if any(tok in sel for tok in [".dark", '[data-theme="dark"]', "[data-theme='dark']"]):
             target = "dark"
+        elif ":root" in sel or '[data-theme="light"]' in sel or "[data-theme='light']" in sel:
+            target = "light"
         if not target:
             continue
         for var_name, var_val in re.findall(r"(--[a-zA-Z0-9_-]+)\s*:\s*([^;]+);", body):

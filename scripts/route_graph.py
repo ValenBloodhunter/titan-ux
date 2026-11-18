@@ -59,13 +59,15 @@ def _resolve_import(root: Path, src_file: Path, spec: str, aliases: dict[str, li
     return Path("__BROKEN__:" + spec)
 
 
-def _known_routes(root: Path, files: list[Path]) -> set[str]:
+def _known_routes(root: Path, files: list[Path]) -> tuple[set[str], bool]:
     routes_set = {"/"}
+    found_route_files = False
     for f in files:
         rel = f.relative_to(root).as_posix()
         # Next.js App Router: app/**/page.tsx or src/app/**/page.tsx
         m_app = re.match(r"^(?:src/)?app/(.*/)?page\.(?:tsx|jsx|ts|js)$", rel)
         if m_app:
+            found_route_files = True
             seg = "/" + (m_app.group(1) or "").strip("/")
             # Strip route groups like (marketing)
             seg = re.sub(r"/\([^/)]+\)", "", seg) or "/"
@@ -73,13 +75,15 @@ def _known_routes(root: Path, files: list[Path]) -> set[str]:
         # Next.js Pages Router / Astro pages
         m_pages = re.match(r"^(?:src/)?pages/(.*)\.(?:tsx|jsx|ts|js|astro)$", rel)
         if m_pages:
+            found_route_files = True
             sub = m_pages.group(1)
             if not sub.startswith("_") and not sub.startswith("api/"):
                 sub = re.sub(r"(?:^|/)index$", "", sub)
                 routes_set.add("/" + sub.strip("/"))
         if rel.endswith(".html"):
+            found_route_files = True
             routes_set.add("/" + rel)
-    return routes_set
+    return routes_set, found_route_files
 
 
 def _route_matches(href: str, known: set[str]) -> bool:
@@ -99,7 +103,7 @@ def analyze_graph(root: Path) -> dict:
     root = root.resolve()
     files = iter_source_files(root, FRONTEND_EXTENSIONS)
     aliases = _load_ts_alias_prefixes(root)
-    known_routes = _known_routes(root, files)
+    known_routes, has_route_files = _known_routes(root, files)
 
     adj: dict[str, list[str]] = {}
     in_degree: dict[str, int] = {}
@@ -145,7 +149,7 @@ def analyze_graph(root: Path) -> dict:
                     adj[rel].append(target_rel)
                     in_degree[target_rel] = in_degree.get(target_rel, 0) + 1
 
-        if known_routes != {"/"}:
+        if has_route_files:
             for lm in link_re.finditer(text):
                 href = lm.group(1)
                 if href.startswith("/api/") or "." in Path(href).name:

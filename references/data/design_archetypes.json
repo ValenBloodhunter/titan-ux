@@ -14,7 +14,7 @@
     ],
     "surface_treatment": "Low-glare charcoal or clean neutral-slate surfaces with crisp 1px hairline borders and restrained single-hue focus accent.",
     "recommended_palettes": ["obsidian-cobalt", "graphite-emerald", "zinc-signal-blue"],
-    "recommended_fonts": ["geist-mono-precision", "jakarta-jetbrains"],
+    "recommended_fonts": ["geist-mono-precision", "ibm-plex-mono-ledger"],
     "avoid": ["Rainbow multi-hue badges everywhere", "Heavy glass blur over scrolling text", "Cards nested 3 levels deep"]
   },
   {

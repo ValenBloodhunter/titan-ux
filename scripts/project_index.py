@@ -154,10 +154,10 @@ def _scan_styling_and_tokens(root: Path, pkg: dict | None, files: list[Path]) ->
                 txt = f.read_text(encoding="utf-8", errors="ignore")
             except OSError:
                 continue
-            for m in re.findall(r"next/font/google[\"';\s\S]{0,120}?import\s*\{([^}]+)\}", txt):
+            for m in re.findall(r"import\s*\{([^}]+)\}\s*from\s*['\"]next/font/(?:google|local)['\"]", txt):
                 for name in m.split(","):
                     if name.strip():
-                        fonts.add(name.strip())
+                        fonts.add(name.strip().split(" as ")[0].strip())
             for m in re.findall(r"fonts\.googleapis\.com/css2\?family=([^&\"']+)", txt):
                 fonts.add(m.split(":")[0].replace("+", " "))
 
