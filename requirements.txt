@@ -1,0 +1,4 @@
+# Core scripts and CLI helpers require Python 3.10+ standard library only.
+# Optional for development testing / browser QA:
+# pytest>=8.0
+# Playwright (Node): npm install -D playwright @axe-core/playwright

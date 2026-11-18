@@ -1,0 +1,212 @@
+{
+  "commands": {
+    "discover": {
+      "playbook": "Command A",
+      "mode": "read-only",
+      "modules": [],
+      "templates": []
+    },
+    "architect": {
+      "playbook": "Command B",
+      "mode": "plan",
+      "modules": [
+        "references/modules/design-direction.md"
+      ],
+      "templates": [
+        "references/templates/architect-manifest.md"
+      ]
+    },
+    "tokens": {
+      "playbook": "Command C",
+      "mode": "write-tokens",
+      "modules": [
+        "references/modules/tokens-and-css.md"
+      ],
+      "templates": []
+    },
+    "build": {
+      "playbook": "Command D",
+      "mode": "build",
+      "modules": [
+        "references/modules/design-direction.md",
+        "references/modules/tokens-and-css.md",
+        "references/modules/composition-and-ui.md",
+        "references/modules/accessibility-wcag.md"
+      ],
+      "templates": [
+        "references/templates/architect-manifest.md",
+        "references/templates/verification_checklist.md"
+      ]
+    },
+    "polish": {
+      "playbook": "Command E",
+      "mode": "refactor",
+      "modules": [
+        "references/modules/design-direction.md",
+        "references/modules/composition-and-ui.md"
+      ],
+      "templates": [
+        "references/templates/verification_checklist.md"
+      ]
+    },
+    "motion": {
+      "playbook": "Command F",
+      "mode": "refactor",
+      "modules": [
+        "references/modules/motion-engineering.md"
+      ],
+      "templates": [
+        "references/templates/animation_review_template.md"
+      ]
+    },
+    "a11y": {
+      "playbook": "Command G",
+      "mode": "audit-fix",
+      "modules": [
+        "references/modules/accessibility-wcag.md"
+      ],
+      "templates": []
+    },
+    "perf": {
+      "playbook": "Command H",
+      "mode": "audit-fix",
+      "modules": [
+        "references/modules/react-nextjs-perf.md",
+        "references/modules/cwv-seo-resilience.md"
+      ],
+      "templates": []
+    },
+    "verify": {
+      "playbook": "Command I",
+      "mode": "verify",
+      "modules": [
+        "references/modules/browser-qa.md"
+      ],
+      "templates": [
+        "references/templates/verification_checklist.md"
+      ]
+    },
+    "migrate": {
+      "playbook": "Command J",
+      "mode": "refactor",
+      "modules": [
+        "references/modules/tokens-and-css.md",
+        "references/modules/composition-and-ui.md"
+      ],
+      "templates": []
+    },
+    "compare": {
+      "playbook": "Command K",
+      "mode": "read-only",
+      "modules": [],
+      "templates": [
+        "references/templates/comparison_template.md"
+      ]
+    }
+  },
+  "surfaces": {
+    "saas-app": {
+      "default_density": "compact",
+      "default_motion_tier": 1,
+      "default_archetype": "linear-precision",
+      "required_states": ["loading", "empty", "error", "disabled", "focus-visible"],
+      "conditional_modules": [
+        "references/modules/composition-and-ui.md",
+        "references/modules/accessibility-wcag.md",
+        "references/modules/motion-engineering.md"
+      ],
+      "aliases": ["dashboard", "workspace", "admin", "portal", "web-app"]
+    },
+    "marketing-editorial": {
+      "default_density": "editorial",
+      "default_motion_tier": 2,
+      "default_archetype": "editorial-high-craft",
+      "required_states": ["focus-visible", "reduced-motion", "responsive-mobile"],
+      "conditional_modules": [
+        "references/modules/design-direction.md",
+        "references/modules/motion-engineering.md",
+        "references/modules/cwv-seo-resilience.md"
+      ],
+      "aliases": ["landing", "marketing", "portfolio", "launch", "editorial"]
+    },
+    "docs-content": {
+      "default_density": "balanced",
+      "default_motion_tier": 0,
+      "default_archetype": "swiss-technical-docs",
+      "required_states": ["loading", "empty", "focus-visible", "keyboard-search"],
+      "conditional_modules": [
+        "references/modules/accessibility-wcag.md",
+        "references/modules/cwv-seo-resilience.md"
+      ],
+      "aliases": ["docs", "documentation", "blog", "knowledge-base", "mdx"]
+    },
+    "commerce-storefront": {
+      "default_density": "balanced",
+      "default_motion_tier": 1,
+      "default_archetype": "atelier-commerce",
+      "required_states": ["loading", "empty", "error", "optimistic-cart", "focus-visible"],
+      "conditional_modules": [
+        "references/modules/cwv-seo-resilience.md",
+        "references/modules/composition-and-ui.md",
+        "references/modules/accessibility-wcag.md"
+      ],
+      "aliases": ["ecommerce", "storefront", "shop", "checkout", "catalog"]
+    },
+    "design-system": {
+      "default_density": "balanced",
+      "default_motion_tier": 1,
+      "default_archetype": "token-primitive-system",
+      "required_states": ["loading", "disabled", "error", "focus-visible", "aria-states"],
+      "conditional_modules": [
+        "references/modules/tokens-and-css.md",
+        "references/modules/composition-and-ui.md",
+        "references/modules/accessibility-wcag.md"
+      ],
+      "aliases": ["ui-kit", "component-library", "tokens", "primitives"]
+    },
+    "interactive-canvas": {
+      "default_density": "compact",
+      "default_motion_tier": 2,
+      "default_archetype": "spatial-studio",
+      "required_states": ["loading", "webgl-fallback", "reduced-motion", "keyboard-controls"],
+      "conditional_modules": [
+        "references/modules/threejs-dataviz.md",
+        "references/modules/motion-engineering.md",
+        "references/modules/cwv-seo-resilience.md"
+      ],
+      "aliases": ["threejs", "webgl", "canvas", "3d", "dataviz", "editor"]
+    }
+  },
+  "stacks": {
+    "nextjs-app": {
+      "component_ext": ".tsx",
+      "perf_module": "references/modules/react-nextjs-perf.md",
+      "aliases": ["next", "nextjs", "next-app", "app-router"]
+    },
+    "react-vite": {
+      "component_ext": ".tsx",
+      "perf_module": "references/modules/react-nextjs-perf.md",
+      "aliases": ["react", "vite", "remix", "tanstack"]
+    },
+    "vue-nuxt": {
+      "component_ext": ".vue",
+      "perf_module": "references/modules/cwv-seo-resilience.md",
+      "aliases": ["vue", "nuxt", "nuxt3"]
+    },
+    "svelte-kit": {
+      "component_ext": ".svelte",
+      "perf_module": "references/modules/cwv-seo-resilience.md",
+      "aliases": ["svelte", "sveltekit"]
+    },
+    "astro": {
+      "component_ext": ".astro",
+      "perf_module": "references/modules/cwv-seo-resilience.md",
+      "aliases": ["astro"]
+    },
+    "vanilla-web": {
+      "component_ext": ".html",
+      "perf_module": "references/modules/cwv-seo-resilience.md",
+      "aliases": ["html", "vanilla", "static", "css"]
+    }
+  }
+}
